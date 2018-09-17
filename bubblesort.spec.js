@@ -2,12 +2,12 @@ describe('Bubble Sort', function() {
   it('handles an empty array', function() {
     expect(bubbleSort([])).toEqual([]);
   });
-  beforeAll(function() {
+  beforeEach(function() {
     spyOn(window, 'swap').and.callThrough();
     spyOn(window, 'compare').and.callThrough();
   });
   it('should not swap more than necessary', function() {
-    bubbleSort([4, 1, 2, 7234]);
+    bubbleSort([4, 1, 2, 39]);
     expect(swap.calls.count()).toEqual(2);
   });
   it('number of comparisons', function() {
@@ -21,7 +21,6 @@ describe('Bubble Sort', function() {
     expect(bubbleSort([4])).toEqual([4]);
     expect(bubbleSort(['apple'])).toEqual(['apple']);
   });
-
 
   //   it('sorts multiple strings', function() {
   //     expect(bubbleSort(['dog', 'banana', 'apple', 'cat'])).toEqual([

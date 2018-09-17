@@ -23,12 +23,13 @@ function swap(i, unorderedArray) {
 }
 
 function compare(unorderedArray, i) {
+  // console.log('hi');
   if (unorderedArray[i] >= unorderedArray[i + 1]) {
     swap(i, unorderedArray);
   }
   counter++;
 }
 
-bubbleSort([4, 1, 2, 30]);
-console.log(counter);
-console.log(swapCounter);
+// bubbleSort([4, 1, 2]);
+// console.log(counter);
+// console.log(swapCounter);
