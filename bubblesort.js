@@ -1,10 +1,10 @@
 let counter = 0;
+let swapCounter = 0;
 
 function bubbleSort(unorderedArray, tracker = unorderedArray.length - 1) {
   while (tracker >= 0) {
     for (let i = 0; i < tracker; i++) {
-      compare(unorderedArray, i)
-
+      compare(unorderedArray, i);
     }
     tracker--;
     bubbleSort(unorderedArray, tracker);
@@ -14,16 +14,21 @@ function bubbleSort(unorderedArray, tracker = unorderedArray.length - 1) {
 }
 
 function swap(i, unorderedArray) {
-  [unorderedArray[i], unorderedArray[i + 1]] = [unorderedArray[i + 1],unorderedArray[i]];
+  [unorderedArray[i], unorderedArray[i + 1]] = [
+    unorderedArray[i + 1],
+    unorderedArray[i],
+  ];
+  swapCounter++;
   return unorderedArray;
 }
 
-function compare (unorderedArray, i) {
+function compare(unorderedArray, i) {
   if (unorderedArray[i] >= unorderedArray[i + 1]) {
     swap(i, unorderedArray);
   }
   counter++;
 }
 
-bubbleSort([4,1,2]);
+bubbleSort([4, 1, 2, 30]);
 console.log(counter);
+console.log(swapCounter);
