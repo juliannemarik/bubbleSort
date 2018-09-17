@@ -20,7 +20,16 @@ function merge(arr1, arr2, mergedArr = []) {
   }
 }
 
-function mergeSort() {
-  if (sortedArr1[0] < sortedArr2[0]) {
+function mergeSort(array) {
+  // base case:
+  if (array.length === 1){
+    return array;
   }
+    let splitArray = split(array);
+    let arrayLeft = splitArray[0];
+    let arrayRight = splitArray[1];
+
+    return merge(mergeSort(arrayLeft), mergeSort(arrayRight));
+
 }
+
