@@ -19,17 +19,5 @@ describe('Bubble Sort', function() {
   });
   it('handles an array with one item', function() {
     expect(bubbleSort([4])).toEqual([4]);
-    expect(bubbleSort(['apple'])).toEqual(['apple']);
   });
-
-  //   it('sorts multiple strings', function() {
-  //     expect(bubbleSort(['dog', 'banana', 'apple', 'cat'])).toEqual([
-  //       'apple',
-  //       'banana',
-  //       'cat',
-  //       'dog',
-  //     ]);
-  //   });
-  //   it('sorts an array with multiple data types', function() {
-  //   expect(bubbleSort(['dog', 'banana', 1, 5, 17])).toEqual([]);
 });
