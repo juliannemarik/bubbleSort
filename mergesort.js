@@ -1,4 +1,8 @@
 
+// Function: mergeSort()
+// ---------------------
+// Purpose: the mergeSort function implements a merge sort on an input array,
+// returning a sorted array
 function mergeSort(array) {
   if (array.length === 1){
     return array;
@@ -10,6 +14,10 @@ function mergeSort(array) {
   return merge(mergeSort(arrayLeft), mergeSort(arrayRight));
 }
 
+// Function: split()
+// -------------------
+// Purpose: the split function takes an array and splits it down the middle
+// into two arrays
 function split(wholeArray) {
   if (wholeArray.length === 1) {
     return wholeArray;
@@ -18,6 +26,10 @@ function split(wholeArray) {
   return [wholeArray.slice(0, splitIdx), wholeArray.slice(splitIdx)];
 }
 
+// Function: merge()
+// -------------------
+// Purpose: the merge function takes two sorted arrays and merges them into
+// a single sorted array
 function merge(arr1, arr2, mergedArr = []) {
   if (arr1.length === 0 || arr2.length === 0) {
     let lastArr = arr1.length ? arr1 : arr2;
